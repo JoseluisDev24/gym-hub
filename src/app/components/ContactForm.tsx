@@ -50,15 +50,17 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="flex flex-col items-center justify-center min-h-screen text-white p-5">
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl md:text-5xl font-bold mb-10 text-center"
-      >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      id="contact"
+      className="flex flex-col items-center justify-center min-h-screen text-white p-5"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">
         Contact Us
-      </motion.h2>
+      </h2>
       <motion.form
         onSubmit={handleSubmit}
         variants={containerVariants}
@@ -123,7 +125,7 @@ const ContactForm: React.FC = () => {
           Send Message
         </motion.button>
       </motion.form>
-    </div>
+    </motion.div>
   );
 };
 

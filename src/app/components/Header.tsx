@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import { motion } from "framer-motion";
 
 const links = [
   { name: "Home", href: "#" },
@@ -17,10 +16,8 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <motion.header
-      initial={{ filter: "blur(8px)", opacity: 0 }}
-      animate={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+    <header
+      
       className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-700/50 h-16"
     >
       <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between">
@@ -90,6 +87,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }

@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
 import ContactForm from "./components/ContactForm";
+import Gallery from "./components/Gallery";
+import TestimonialsSlider from "./components/TestimonialsSlider";
 
 
 export default function Home() {
@@ -13,8 +15,12 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
+        <TestimonialsSlider />
+        <Gallery />
         <ContactForm />
       </div>
     </div>
   );
 }
+
+

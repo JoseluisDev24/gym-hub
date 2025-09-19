@@ -12,15 +12,15 @@ const services = [
     icon: <FitnessCenterIcon className="text-red-500 text-3xl" />,
   },
   {
-    title: "Group Classes",
+    title: "Group Fitness Classes",
     description:
-      "Join our energetic group classes including yoga, HIIT, and spinning.",
+      "Engaging and motivating group classes led by experienced instructors, covering various fitness disciplines.",
     icon: <FavoriteBorderIcon className="text-red-500 text-3xl" />,
   },
   {
     title: "Nutrition Guidance",
     description:
-      "Personalized nutrition plans and consultations with our experts.",
+      "Personalized nutrition plans and support to complement your fitness journey and maximize results.",
     icon: <GroupsIcon className="text-red-500 text-3xl" />,
   },
 ];
@@ -30,8 +30,8 @@ export default function Services() {
     <section id="services" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white pb-8">Our Services</h2>
+          <h3 className="text-4xl font-bold text-white mb-6">
             Comprehensive Fitness Solutions
           </h3>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -42,11 +42,11 @@ export default function Services() {
         </div>
 
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
           className="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto"
-          initial={{ opacity: 0, x: 150 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          viewport={{ once: true }}
         >
           {services.map((service) => (
             <div

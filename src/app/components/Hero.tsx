@@ -18,16 +18,17 @@ export default function Hero() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-20 text-white text-start flex flex-col gap-4 max-w-xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="relative z-20 text-white text-start flex flex-col gap-6 max-w-xl"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 className="text-6xl font-bold leading-tight">
           Unleash Your Potential
         </h1>
 
-        <p className="text-base md:text-lg lg:text-xl mb-4 max-w-lg leading-7 text-gray-200">
+        <p className="text-base md:text-lg mb-4 max-w-lg leading-7 text-gray-200">
           Transform your body and mind with our state-of-the-art facilities and
           expert trainers. Join our community and achieve your fitness goals.
         </p>
