@@ -6,9 +6,9 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 const links = [
   { name: "Home", href: "#" },
   { name: "Services", href: "#services" },
-  { name: "Pricings", href: "#" },
-  { name: "Success Stories", href: "#" },
-  { name: "Gallery", href: "#" },
+  { name: "Pricings", href: "#pricing" },
+  { name: "Success Stories", href: "#testimonials" },
+  { name: "Gallery", href: "#gallery" },
   { name: "About Us", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
@@ -17,16 +17,15 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header
-      
       className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-700/50 h-16"
     >
       <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <a href="#" className="flex items-center gap-3">
           <AddCircleOutlineIcon style={{ color: "red", fontSize: "1.5rem" }} />
           <span className="text-white text-xl md:text-2xl font-bold">
             Gym Hub
           </span>
-        </div>
+        </a>
 
         <nav className="hidden lg:flex items-center gap-6">
           {links.map((link) => (

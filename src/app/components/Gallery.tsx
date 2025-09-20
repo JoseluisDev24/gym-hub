@@ -72,14 +72,14 @@ export default function Gallery() {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-black">
+    <section id="gallery" className="py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-12 md:mb-16"
+          className="text-3xl md:text-5xl font-bold text-center text-white pb-12 md:pb-16"
         >
           Gallery
         </motion.h2>
@@ -138,12 +138,12 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-12 md:mt-16"
+          className="text-center pt-12 md:pt-16 flex flex-col gap-4"
         >
-          <p className="text-gray-300 mb-6 text-sm sm:text-base">
+          <p className="text-gray-300 pb-6 text-sm sm:text-base">
             Experience our world-class facilities in person
           </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-lg transition-colors duration-300 text-sm sm:text-base">
+          <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 sm:px-8 py-3 rounded-lg transition-colors duration-300 text-sm sm:text-base w-full sm:w-64 mx-auto">
             Schedule a Tour
           </button>
         </motion.div>

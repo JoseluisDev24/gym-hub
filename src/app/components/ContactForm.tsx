@@ -55,7 +55,6 @@ const ContactForm: React.FC = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      id="contact"
       className="flex flex-col items-center justify-center min-h-screen text-white p-5"
     >
       <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">

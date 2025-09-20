@@ -37,7 +37,7 @@ export default function TestimonialsSlider() {
   ];
 
   return (
-    <motion.div className="w-full max-w-5xl mx-auto px-4 py-28">
+    <motion.div id="testimonials" className="w-full max-w-5xl mx-auto px-4 py-28 bg-black">
       <h2 className="text-center text-3xl font-semibold pb-16">
         Success Stories
       </h2>
