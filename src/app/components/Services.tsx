@@ -28,7 +28,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-20 px-4">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white pb-8">Our Services</h2>
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -56,9 +56,9 @@ export default function Services() {
               <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-neutral-800 flex items-center justify-center group-hover:bg-neutral-700 transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-white">
+              <h2 className="text-lg font-semibold mb-3 text-white">
                 {service.title}
-              </h3>
+              </h2>
               <p className="text-gray-400 leading-relaxed text-sm">
                 {service.description}
               </p>

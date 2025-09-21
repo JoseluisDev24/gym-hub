@@ -12,27 +12,27 @@ export default function TestimonialsSlider() {
   const testimonials = [
     {
       id: 1,
-      image: "/gym8.jpg",
+      image: "/gym8.webp",
       name: "Carlos lost 50 pounds and transformed her life with our personal trainer program. She feels more confident and energetic than ever before.",
-      quote: "Excelente servicio, superó mis expectativas.",
+      quote: "Excellent service, exceeded my expectations.",
     },
     {
       id: 2,
-      image: "/gym3.jpg",
-      name: "Carlos lost 50 pounds and transformed her life with our personal trainer program. She feels more confident and energetic than ever before.",
-      quote: "Muy buena atención y entrega rápida.",
+      image: "/gym9.webp",
+      name: "Sergio built muscle and improved his overall fitness with our state-of-the-art equipment and supportive community.",
+      quote: "Visible results in just a few weeks.",
     },
     {
       id: 3,
-      image: "/gym7.jpg",
-      name: "Carlos lost 50 pounds and transformed her life with our personal trainer program. She feels more confident and energetic than ever before.",
-      quote: "Definitivamente volvería a trabajar con ellos.",
+      image: "/gym10.webp",
+      name: "Sara improved her strength and endurance through our group classes. She enjoys the supportive community and expert guidance.",
+      quote: "Unsurpassed quality, I will definitely buy again.",
     },
     {
       id: 4,
-      image: "/gym4.jpg",
-      name: "Carlos lost 50 pounds and transformed her life with our personal trainer program. She feels more confident and energetic than ever before.",
-      quote: "Profesionales y confiables, los recomiendo.",
+      image: "/gym11.webp",
+      name: "David achieved his fitness goals with our affordable membership plans. He appreciates the variety of equipment and friendly staff.",
+      quote: "Professional and trustworthy, I recommend them.",
     },
   ];
 
@@ -71,6 +71,7 @@ export default function TestimonialsSlider() {
                   fill
                   sizes="(max-width: 768px) 400px, 300px"
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="font-medium text-sm">{t.name}</h3>

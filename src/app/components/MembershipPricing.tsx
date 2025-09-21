@@ -43,7 +43,7 @@ export default function MembershipPricing() {
       viewport={{ once: true, amount: 0.2 }}
       className="py-20 px-4 text-white"
     >
-      <h2 className="text-center text-3xl md:text-4xl font-bold pb-12 md:pb-16">
+      <h2 className="text-center text-3xl font-bold pb-12 md:pb-16">
         Membership Pricing
       </h2>
 
@@ -54,7 +54,7 @@ export default function MembershipPricing() {
             onClick={() => setSelectedPlan(plan.name)}
             className={`
               border-2 rounded-2xl px-8 py-6 w-full h-80 md:w-64
-              shadow-xs transition-all duration-300 cursor-pointer
+              shadow-xs hover:shadow-red-700 transition-all duration-300 cursor-pointer
               hover:scale-105 flex flex-col gap-4
               ${
                 selectedPlan === plan.name

@@ -6,47 +6,47 @@ import { useState } from "react";
 
 const galleryImages = [
   {
-    src: "/gym1.jpg",
+    src: "/gym1.webp",
     alt: "Modern gym equipment area",
     span: "row-span-1 col-span-1 md:col-span-2",
   },
   {
-    src: "/gym2.jpg",
+    src: "/gym2.webp",
     alt: "Group fitness class",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym3.jpg",
+    src: "/gym3.webp",
     alt: "Personal training session",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym4.jpg",
+    src: "/gym4.webp",
     alt: "Cardio equipment area",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym5.jpg",
+    src: "/gym5.webp",
     alt: "Free weights section",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym6.jpg",
+    src: "/gym6.webp",
     alt: "Yoga and stretching area",
     span: "row-span-1 col-span-1 md:col-span-2",
   },
   {
-    src: "/gym7.jpg",
+    src: "/gym7.webp",
     alt: "Swimming pool area",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym8.jpg",
+    src: "/gym8.webp",
     alt: "Sauna and relaxation area",
     span: "row-span-1 col-span-1",
   },
   {
-    src: "/gym1.jpg",
+    src: "/gym9.webp",
     alt: "Modern gym equipment area",
     span: "row-span-1 col-span-2",
   },
@@ -79,7 +79,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-center text-white pb-12 md:pb-16"
+          className="text-3xl md:text-4xl font-bold text-center text-white pb-12 md:pb-16"
         >
           Gallery
         </motion.h2>
@@ -104,6 +104,7 @@ export default function Gallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
               />
 
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

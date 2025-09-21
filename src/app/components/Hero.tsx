@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="top" className="relative w-full min-h-screen flex items-center lg:pl-32 px-4 pt-16">
       <div className="absolute inset-0 lg:inset-0 rounded-3xl overflow-hidden z-0">
         <Image
-          src="/heroBackground.jpg"
+          src="/heroBackground.webp"
           alt="Fitness Hero"
           fill
           style={{ objectFit: "cover" }}
