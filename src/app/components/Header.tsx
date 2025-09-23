@@ -15,10 +15,15 @@ const links = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
+  const toggleMenu = () => {
+    setOpen((prevState) => !prevState);
+  };
+
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-700/50 h-16"
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-700/50 h-16">
       <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
           <AddCircleOutlineIcon style={{ color: "red", fontSize: "1.5rem" }} />
@@ -45,7 +50,7 @@ export default function Header() {
         <div className="lg:hidden">
           <button
             aria-label="Open menu"
-            onClick={() => setOpen((s) => !s)}
+            onClick={() => toggleMenu()}
             className="text-white hover:text-red-400 transition-colors"
           >
             <svg
@@ -76,12 +81,16 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
+              onClick={closeMenu}
               className="text-white py-2 font-medium border-b border-white/5"
             >
               {link.name}
             </a>
           ))}
-          <button className="mt-10 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold">
+          <button
+            onClick={closeMenu}
+            className="mt-10 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold"
+          >
             Join Now
           </button>
         </div>

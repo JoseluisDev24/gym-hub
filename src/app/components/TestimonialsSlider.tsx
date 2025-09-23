@@ -1,12 +1,12 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function TestimonialsSlider() {
   const testimonials = [
@@ -37,49 +37,55 @@ export default function TestimonialsSlider() {
   ];
 
   return (
-    <motion.div id="testimonials" className="w-full max-w-5xl mx-auto px-4 py-28 bg-black">
-      <h2 className="text-center text-3xl font-semibold pb-16">
-        Success Stories
-      </h2>
-
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={1}
-        slidesPerView={3}
-        navigation
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop
-        breakpoints={{
-          0: { slidesPerView: 1 }, 
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
+    <>
+      <motion.div
+        id="testimonials"
+        className="w-full max-w-5xl mx-auto px-4 py-28 bg-black"
       >
-        {testimonials.map((t) => (
-          <SwiperSlide key={t.id} className="overflow-visible">
-            <div
-              className="
-                bg-neutral-900 border border-gray-400/20 rounded-2xl px-2 py-4 w-80 md:w-64 h-80 shadow-xs transition-all duration-300 transform-gpu
-                hover:scale-105
-                relative
-              "
-            >
-              <div className="relative w-full aspect-[4/2] mb-4 overflow-hidden rounded-xl">
-                <Image
-                  src={t.image}
-                  alt={t.name}
-                  fill
-                  sizes="(max-width: 768px) 400px, 300px"
-                  className="object-cover"
-                  loading="lazy"
-                />
+        <h2 className="text-center text-3xl font-semibold pb-16 text-white">
+          Success Stories
+        </h2>
+
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={1}
+          slidesPerView={3}
+          pagination={{
+            el: ".swiper-pagination-custom",
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet-custom",
+            bulletActiveClass: "swiper-pagination-bullet-active-custom",
+          }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {testimonials.map((t) => (
+            <SwiperSlide key={t.id} className="overflow-visible">
+              <div className="bg-neutral-900 border border-gray-400/20 rounded-2xl px-2 py-4 w-80 md:w-64 h-80 shadow-xs transition-all duration-300 transform-gpu hover:scale-105 relative">
+                <div className="relative w-full aspect-[4/2] mb-4 overflow-hidden rounded-xl">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    sizes="(max-width: 768px) 400px, 300px"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="font-medium text-sm text-white">{t.name}</h3>
+                <p className="text-gray-400 text-sm mt-2">{`"${t.quote}"`}</p>
               </div>
-              <h3 className="font-medium text-sm">{t.name}</h3>
-              <p className="text-gray-400 text-sm mt-2">“{t.quote}”</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="swiper-pagination-custom flex justify-center mt-8 gap-2"></div>
+      </motion.div>
+    </>
   );
 }

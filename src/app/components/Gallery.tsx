@@ -48,9 +48,10 @@ const galleryImages = [
   {
     src: "/gym9.webp",
     alt: "Modern gym equipment area",
-    span: "row-span-1 col-span-2",
+    span: "row-span-1 col-span-1 md:col-span-2",
   },
 ];
+
 
 export default function Gallery() {
   type GalleryImage = {
@@ -73,7 +74,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="p-3 max-w-46 rounded-lg border-none bg-red-600 text-white text-lg font-bold cursor-pointer mt-5 hover:bg-red-700 transition duration-300"
+          className="p-3 w-full sm:max-w-46 rounded-lg border-none bg-red-600 text-white text-lg font-bold cursor-pointer mt-5 hover:bg-red-700 transition duration-300"
         >
           Send Message
         </motion.button>
