@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative w-full min-h-screen flex items-center lg:pl-32 px-4 pt-16">
+    <section
+      id="top"
+      className="relative w-full min-h-screen flex items-center lg:pl-32 px-4 pt-16"
+    >
       <div className="absolute inset-0 lg:inset-0 rounded-3xl overflow-hidden z-0">
         <Image
           src="/heroBackground.webp"
@@ -13,6 +16,8 @@ export default function Hero() {
           fill
           style={{ objectFit: "cover" }}
           priority
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
       </div>
@@ -35,15 +40,15 @@ export default function Hero() {
 
         <div className="flex gap-3 flex-col sm:flex-row">
           <a
-            href="#get-started"
-            className="bg-red-600 text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center inline-block"
+            href="#pricing"
+            className="bg-red-600 min-w-52 text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center inline-block"
           >
             Start Your Journey
           </a>
 
           <a
-            href="#programs"
-            className="border border-white/20 text-white px-6 py-3 rounded-md text-center inline-block"
+            href="#services"
+            className="border min-w-52 border-white/20 backdrop-blur-xs text-white px-6 py-3 rounded-md text-center inline-block"
           >
             Our Programs
           </a>

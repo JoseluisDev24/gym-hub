@@ -25,9 +25,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-700/50 h-16">
       <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
-          <AddCircleOutlineIcon style={{ color: "red", fontSize: "1.5rem" }} />
-          <span className="text-white text-xl md:text-2xl font-bold">
+        <a href="#" className="flex items-center gap-3 group">
+          <AddCircleOutlineIcon
+            style={{ color: "red", fontSize: "1.5rem" }}
+            className="group-hover:scale-110 transition-transform duration-300"
+          />
+          <span className="text-white text-xl md:text-2xl font-bold group-hover:text-red-600 transition-colors duration-300">
             Gym Hub
           </span>
         </a>
@@ -37,9 +40,10 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-white hover:text-red-400 transition-colors duration-300 font-medium"
+              className="text-white hover:text-red-400 transition-colors duration-300 font-medium relative group"
             >
               {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
           <button className="ml-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition-colors duration-300">
@@ -71,8 +75,8 @@ export default function Header() {
       </div>
 
       <div
-        className={`lg:hidden absolute left-0 right-0 top-16 bg-black/98 backdrop-blur-md border-b border-gray-700/40 transition-all duration-200 overflow-hidden ${
-          open ? "min-h-[550px]" : "max-h-0"
+        className={`lg:hidden absolute left-0 right-0 top-16 bg-black/95 backdrop-blur- border-b border-gray-700/40 transition-all duration-200 overflow-hidden ${
+          open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
         aria-hidden={!open}
       >
@@ -89,7 +93,7 @@ export default function Header() {
           ))}
           <button
             onClick={closeMenu}
-            className="mt-10 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold"
+            className="mt-10 bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-lg font-semibold"
           >
             Join Now
           </button>
